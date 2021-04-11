@@ -12,7 +12,7 @@ let Life=80;
 let left=false;
 let right=false;
 let game_over=false;
-let Max_level=1;
+let Max_level=3;
 const paddle = {
     x: canvas_comp.width / 2 - paddle_width / 2,
     y: canvas_comp.height - paddle_height -paddle_margin_bottom,
