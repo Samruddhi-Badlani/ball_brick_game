@@ -2,7 +2,7 @@ const canvas_comp = document.getElementById('game_canvas');
 const canvas_content = canvas_comp.getContext('2d');
 canvas_content.lineWidth=2
 const paddle_width = 30
-const paddle_height = 5
+const paddle_height = 10
 const paddle_margin_bottom = 20
 const ball_radius=4;
 let Score=0;
@@ -30,10 +30,10 @@ const ball={
 }
 const brick = {
     row:1,
-    column:10,
+    column:6,
     width:20,
     height:5,
-    left_offset:10,
+    left_offset:30,
     top_offset:7,
     margin_top:10,
     color:"#121212",
@@ -116,9 +116,11 @@ function ball_paddle(){
     }
     else if(ball.x+ball.radius==paddle.x && ball.y - ball.radius==paddle.y){
         ball.dx=-ball.dx;
+        ball.dy-=ball.dy;
     }
     else if(ball.x-ball.radius==paddle.x+paddle.width && ball.y -ball.radius == paddle.y){
         ball.dx=-ball.dx;
+        ball.dy-=ball.dy;
     }
 }
 function ball_brick(){
